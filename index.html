@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Coletas</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#333">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestão de Coletas</h1>
+    </header>
+
+    <main>
+        <section id="financeiro">
+            <h2>Controle Financeiro Mensal</h2>
+            
+            <form id="form-transacao">
+                <input type="text" id="descricao" placeholder="Descrição (Ex: Diesel, Coleta X)" required>
+                <input type="number" id="valor" placeholder="Valor (use - para gastos)" step="0.01" required>
+                <button type="submit">Adicionar Lançamento</button>
+            </form>
+
+            <div id="resumo-financeiro">
+                <h3>Resumo do Mês</h3>
+                <p>Lucro Bruto: <span id="total-lucros">R$ 0,00</span></p>
+                <p>Gastos Totais: <span id="total-gastos">R$ 0,00</span></p>
+                <p><strong>Saldo Líquido: <span id="saldo-liquido">R$ 0,00</span></strong></p>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="grafico-financeiro"></canvas>
+            </div>
+
+            <ul id="lista-transacoes">
+                </ul>
+        </section>
+
+        <section id="rotas">
+            <h2>Coletas do Dia</h2>
+            <form id="form-rota">
+                <input type="text" id="endereco" placeholder="Endereço da coleta" required>
+                <button type="submit">Adicionar Parada</button>
+            </form>
+            <ul id="lista-paradas">
+                </ul>
+
+                <div id="calculo-combustivel">
+            <h4>Estimativa de Combustível</h4>
+            <div class="form-grid">
+                <input type="number" id="consumo-medio" placeholder="Km / Litro (Ex: 3.5)" step="0.1">
+                <input type="number" id="distancia-total" placeholder="Distância da Rota (Km)" step="1">
+            </div>
+            <h3>Gasto Estimado: <span id="resultado-litros">0.00</span> L</h3>
+        </div>
+                <button id="btn-otimizar-google">Ver Rota no Google Maps</button>
+
+            <button id="btn-otimizar-google">Ver Rota no Google Maps</button>
+            <button id="btn-limpar-rota" class="btn-perigo">Limpar Rota do Dia</button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

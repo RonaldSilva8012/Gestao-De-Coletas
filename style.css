@@ -1,0 +1,140 @@
+/* Estilos anteriores (copie todos da resposta anterior) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input, button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resumo-financeiro {
+    border-top: 2px solid #eee;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+#resumo-financeiro p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+#resumo-financeiro #saldo-liquido {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fafafa;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Classes para cor do valor */
+.lucro { color: green; }
+.gasto { color: red; }
+
+
+/* --- NOVO ESTILO --- */
+/* Container do Gráfico */
+.chart-container {
+    position: relative;
+    height: 300px; /* Ajuste a altura conforme necessário */
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem; /* Dá um espaço do valor */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Vermelho mais escuro */
+}
+
+#calculo-combustivel {
+    margin: 1.5rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#calculo-combustivel h3 {
+    text-align: center;
+    color: #333;
+}
+
+#resultado-litros {
+    color: #007bff; /* Azul */
+    font-weight: bold;
+}
